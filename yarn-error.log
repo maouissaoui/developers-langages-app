@@ -1,0 +1,85 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\Aouissaoui\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add bootstrap@4.0.0-alpha.6
+
+PATH: 
+  C:\Users\Aouissaoui\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\Aouissaoui\bin;C:\Program Files (x86)\EasyPHP-DevServer-13.1VC9\binaries\php\php_runningversion;C:\Program Files (x86)\EasyPHP-DevServer-14.1VC9\binaries\php\php_runningversion;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Program Files\Hewlett-Packard\SimplePass;C:\Program Files (x86)\Windows Live\Shared;C:\Formation\Outil\apache-maven-3.1.1\bin;%M2HOME%\bin;C:\Program Files\Java\jdk1.7.0_65\bin;C:\Formation\Outil\BD\derby\bin;C:\Formation\JBossForge\forge-distribution\bin;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn;C:\Program Files\Microsoft SQL Server\100\Tools\Binn;C:\Program Files\Microsoft SQL Server\100\DTS\Binn;C:\Program Files (x86)\MySQL\MySQL Utilities 1.4.3;C:\Program Files (x86)\MySQL\MySQL Utilities 1.4.3\Doctrine extensions for PHP;C:\Users\Aouissaoui\Documents\Projets\Apache\maven\bin;C:\Program Files (x86)\Subversion\bin;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Git\cmd;C:\Program Files (x86)\Skype\Phone;C:\Program Files\nodejs;C:\Program Files\Docker Toolbox;C:\Users\Aouissaoui\AppData\Roaming\npm;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl
+
+Yarn version: 
+  0.22.0
+
+Node version: 
+  6.10.2
+
+Platform: 
+  win32 x64
+
+npm manifest: 
+  {
+    "name": "developers-langages-app",
+    "version": "0.0.0",
+    "license": "MIT",
+    "scripts": {
+      "ng": "ng",
+      "start": "ng serve",
+      "build": "ng build",
+      "test": "ng test",
+      "lint": "ng lint",
+      "e2e": "ng e2e"
+    },
+    "private": true,
+    "dependencies": {
+      "@angular/common": "^4.0.0",
+      "@angular/compiler": "^4.0.0",
+      "@angular/core": "^4.0.0",
+      "@angular/forms": "^4.0.0",
+      "@angular/http": "^4.0.0",
+      "@angular/platform-browser": "^4.0.0",
+      "@angular/platform-browser-dynamic": "^4.0.0",
+      "@angular/router": "^4.0.0",
+      "@ng-bootstrap/ng-bootstrap": "^1.0.0-alpha.22",
+      "bootstrap": "^4.0.0-alpha.6",
+      "core-js": "^2.4.1",
+      "ngx-bootstrap": "^1.6.6",
+      "rxjs": "^5.1.0",
+      "zone.js": "^0.8.4"
+    },
+    "devDependencies": {
+      "@angular/cli": "1.0.0",
+      "@angular/compiler-cli": "^4.0.0",
+      "@types/jasmine": "2.5.38",
+      "@types/node": "~6.0.60",
+      "codelyzer": "~2.0.0",
+      "jasmine-core": "~2.5.2",
+      "jasmine-spec-reporter": "~3.2.0",
+      "karma": "~1.4.1",
+      "karma-chrome-launcher": "~2.0.0",
+      "karma-cli": "~1.0.1",
+      "karma-jasmine": "~1.1.0",
+      "karma-jasmine-html-reporter": "^0.2.2",
+      "karma-coverage-istanbul-reporter": "^0.2.0",
+      "protractor": "~5.1.0",
+      "ts-node": "~2.0.0",
+      "tslint": "~4.5.0",
+      "typescript": "~2.2.0"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  Error: https://registry.yarnpkg.com/lodash/-/lodash-3.10.1.tgz: Request failed "502 Bad Gateway"
+      at Request.handleRequestError (C:\Users\Aouissaoui\AppData\Roaming\npm\node_modules\yarn\lib\fetchers\tarball-fetcher.js:231:20)
+      at emitOne (events.js:96:13)
+      at Request.emit (events.js:188:7)
+      at Request.onRequestResponse (C:\Users\Aouissaoui\AppData\Roaming\npm\node_modules\yarn\node_modules\request\request.js:1074:10)
+      at emitOne (events.js:96:13)
+      at ClientRequest.emit (events.js:188:7)
+      at HTTPParser.parserOnIncomingClient (_http_client.js:473:21)
+      at HTTPParser.parserOnHeadersComplete (_http_common.js:99:23)
+      at TLSSocket.socketOnData (_http_client.js:362:20)
+      at emitOne (events.js:96:13)
+      at TLSSocket.emit (events.js:188:7)

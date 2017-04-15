@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "Peyton",
+    "niveauCompetence": "assez bien"
+  },
+  {
+    "id": 2,
+    "name": "Java",
+    "niveauCompetence": "bien"
+  },
+  {
+    "id": 3,
+    "name": "javascript",
+    "niveauCompetence": "trés bien"
+  },
+  {
+    "id": 4,
+    "name": "C++",
+    "niveauCompetence": "excellent"
+  },
+  {
+    "id": 5,
+    "name": "HTML",
+    "niveauCompetence": "bien"
+  },
+  {
+    "id": 1,
+    "name": "Peyton",
+    "niveauCompetence": "Manning"
+  }
+]

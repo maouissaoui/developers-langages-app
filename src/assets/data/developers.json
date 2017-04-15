@@ -1,0 +1,38 @@
+[
+  {
+    "id": "1",
+    "firstname": "Peyton",
+    "lastname": "Manning",
+    "email":"peytonmannig@gmail.com",
+    "competence":"bien",
+    "langage":"java"
+
+  },
+  {
+    "id": "2",
+    "firstname": "Demaryius",
+    "lastname": "Thomas",
+    "email":"bb",
+    "competence":"a",
+    "langage":"java"
+
+  },
+  {
+    "id": "3",
+    "firstname": "Demaryius ",
+    "lastname": "Thomas",
+    "email":"bb",
+    "competence":"a",
+    "langage":"java"
+
+  },
+  {
+    "id": "4",
+    "firstname": "Demaryius",
+    "lastname": "Thomas",
+    "email":"bb",
+    "competence":"a",
+    "langage":"java"
+
+  }
+]

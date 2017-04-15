@@ -1,0 +1,29 @@
+<div class="container">
+ <div class="row" >
+   <div class="card col-md-3" style="background: #E0DEDE" *ngFor="let langage of langages">
+     <div class="card-block">
+       
+       <div class="row" style=" margin-top: 14%;">
+         <h5>Name: </h5>
+         <h6 class="card-subtitle mb-2 " style="margin-top: 2px;">{{ langage.name }}</h6>
+       </div>
+       <div class="row" style=" margin-top: 14%;">
+         <h5>Niveau de compétence: </h5>
+         <h6 class="card-subtitle mb-2 " style="margin-top: 2px;">{{ langage.niveauCompetence }}</h6>
+       </div>
+       <div class="btn " style=" margin-top: 14%;">
+         <a href="">
+            <img src="../assets/images/icon-maps.svg" style="width: 26px;">
+          </a>
+          <a href="">
+            <img src="../assets/images/icon-edit.png" style="width: 26px;">
+          </a>
+          <a href="">
+            <img src="../assets/images/icon-delete.png" style="width: 26px;">
+          </a>
+       </div>
+
+     </div>
+   </div>
+  </div >
+</div>

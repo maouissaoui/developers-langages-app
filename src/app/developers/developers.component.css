@@ -1,0 +1,15 @@
+.demo-card {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto 100px;
+}
+.btn-circle {
+  width: 61px;
+  height: 61px;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 12px;
+  line-height: 1.42;
+  border-radius: 46px;
+  background-color: #014c8c;
+}
