@@ -21,7 +21,7 @@ ENTRYPOINT ["nodemon", "server.js"]
 # docker run -d --name mongodb mongo
 # docker run -d -p 3000:3000 --link mongodb --name nodeapp naouissaoui/node
 
-# Option 2: Create a custom bridge network and add containers into it
+# Option 2: Create a developer bridge network and add containers into it
 
 # docker network create --driver bridge isolated_network
 # docker run -d --net=isolated_network --name mongodb mongo
