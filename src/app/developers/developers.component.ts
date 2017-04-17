@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map'
 import { ActivatedRoute, Router } from '@angular/router';
+import { DataService } from '../shared/services/data.service';
+import { IDeveloper} from '../shared/interfaces';
 
 @Component({
   moduleId: module.id,
@@ -22,15 +24,12 @@ developer: any = {
   };
   constructor( private http: Http,
   private route: ActivatedRoute,
-  private router: Router
+  private router: Router, private dataService: DataService
 ) { }
 
   ngOnInit() {
-
-      this.http.get('../assets/data/developers.json')
-     .map(res => res.json())
-     .subscribe( developers => this.developers = developers);
-
+     this.dataService.getDevelopers()
+            .subscribe((data: IDeveloper[]) => this.developers = data);
   }
 
   delete(developer) {
@@ -43,15 +42,7 @@ developer: any = {
   }
 
 
-    add(developer){
-       console.log("Here is post")
-       const body=JSON.stringify(developer);
-       let headers = new Headers({ 'Content-Type': 'application/json' });
-
-       this.http.post('../assets/data/developers.json',body).subscribe(res=> console.log(res.headers));
-       this.hideDialog();
-
-   }
+   
 
  showDialog() {
    this.dialogStatus = 'active';

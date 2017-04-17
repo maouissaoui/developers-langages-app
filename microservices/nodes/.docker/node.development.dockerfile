@@ -2,7 +2,7 @@ FROM node:latest
 
 MAINTAINER Nizar AOUISSAOUI
 
-ENV CONTAINER_PATH /var/www/developers-langages-app
+ENV CONTAINER_PATH /var/www/angularnoderestfulservice
 
 WORKDIR   $CONTAINER_PATH
 
@@ -13,7 +13,7 @@ EXPOSE 3000
 ENTRYPOINT ["nodemon", "server.js"]
 
 
-# Build: docker build -f node.dockerfile -t naouissaoui/node .
+# Build: docker build -f node.development.dockerfile -t naouissaoui/node .
 
 # Option 1
 # Start MongoDB and Node (link Node to MongoDB container with legacy linking)

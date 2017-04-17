@@ -6,29 +6,69 @@ version: '2'
 
 services:
 
-  node:
+  nginx:
+    container_name: nginx
+    image: nginx
+    build:
+      context: .
+      dockerfile: .docker/nginx.dockerfile
+    volumes:
+      - ./dist:/usr/share/nginx/html
+    ports:
+      - "80:80"
+      - "443:443"
+
+    networks:
+      - app-network
+
+  nodes:
     container_name: nodeapp
     image: nodeapp
     build:
-      context: .
+      context: ./microservices/node
       dockerfile: .docker/node.development.dockerfile
     volumes:
-      - .:/var/www/developers-langages-app
+      - ./microservices/node:/var/www/angularnoderestfulservice
     environment:
       - NODE_ENV=development
     ports:
       - "3000:3000"
+    depends_on: 
+      - mongodb
     networks:
-      - nodeapp-network
+      - app-network
       
-  #No authentication is provided here - just a demo! Read the Dockerfile
-  #for more information about adding authentication.
+  #No authentication is provided here - JUST A DEMO! That would absolutely
+  #be needed for a "real" application
   mongodb:
     container_name: mongodb
     image: mongo
     networks:
-      - nodeapp-network
+      - app-network
+
+  # springboot:
+  #   container_name: 'springboot'
+  #   image: 'springboot'
+  #   build:
+  #     context: ./microservices/springboot
+  #     dockerfile: .docker/springboot.development.dockerfile
+  #   volumes:
+  #     - ./microservices/springboot:/var/www/springboot
+  #   ports:
+  #    - "5000:5000"
+  #   depends_on:
+  #    - "mysql"
+  #   networks:
+  #     - app-network
+
+  # mysql:
+  #   container_name: 'mysql'
+  #   image: mysql
+  #   environment:
+  #     MYSQL_PASSWORD: password
+  #   networks:
+  #     - app-network
 
 networks:
-  nodeapp-network:
+  app-network:
     driver: bridge

@@ -13,6 +13,8 @@ import { UpdateComponent } from './update/';
 import { FormComponent } from './form/';
 import { LangagesComponent } from './langages/langages.component';
 
+import { DataService } from './shared/services/data.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +34,7 @@ import { LangagesComponent } from './langages/langages.component';
 
 
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
