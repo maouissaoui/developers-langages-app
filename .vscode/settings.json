@@ -1,0 +1,15 @@
+// Place your settings in this file to overwrite default and user settings.
+{
+    "files.exclude": {
+      "**/app/**/*.js.map": true,
+      "**/app/**/*.js": true,
+      
+      "**/config/*.js.map": true,
+      "**/config/*.js": {
+        "when": "$(basename).js.map"
+      }
+    },
+    "typescript.check.tscVersion": false,
+    "angulardoc.repoId": "36bc9242-1336-470d-b91c-1f926849a079",
+    "angulardoc.lastSync": 0
+  }

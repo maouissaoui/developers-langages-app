@@ -1,28 +1,29 @@
-# DevelopersLangagesApp
+# Angular, Docker and Microservices
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
+To run the project (development mode):
 
-## Development server
+1. Install Docker CE for Mac or Windows (http://docker.com)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+1. Install Angular CLI: `npm install @angular/cli -g`
 
-## Code scaffolding
+1. Run `npm install` at the root of the projet
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class/module`.
+1. Run `npm install` in ./microservices/node
 
-## Build
+1. Run `ng build`
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+1. Run `docker-compose build`
 
-## Running unit tests
+1. Run `docker-compose up`
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+1. Navigate to http://localhost
 
-## Running end-to-end tests
+## Running ng build causes nginx container to 404
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
+When you run ng build it is re-creating the dist folder which
+then breaks your volume if doing something like:
 
-## Further help
+docker run -d -p 8080:80 -v $(pwd):/usr/share/nginx/html nginx:alpine
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+It's OK to update the content but NOT blow away the folder
+due to the volume that's created above.
