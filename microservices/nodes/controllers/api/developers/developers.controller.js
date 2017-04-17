@@ -62,7 +62,7 @@ class DevelopersController {
         });
     }
 
-    updateDeveloper = function (req, res) {
+    updateDeveloper (req, res) {
         console.log('*** updateDeveloper');
         console.log('*** req.body');
         console.log(req.body);
@@ -76,7 +76,7 @@ class DevelopersController {
                 console.log('*** statesRepo.getState error: ' + util.inspect(err));
                 res.json({ status: false, error: 'State not found', developer: null });
             } else {
-                developersRepo.updateDeveloper(req.params.id, req.body, state,  (err, developer) {
+                developersRepo.updateDeveloper(req.params.id, req.body, state,  (err, developer)=>  {
                     if (err) {
                         console.log('*** editDeveloper err' + util.inspect(err));
                         res.json({ 'status': false , error: 'Update failed', developer: null });
@@ -101,7 +101,9 @@ deleteDeveloper(req, res) {
             res.json({ 'status': true });
         }
     });
-};
+}
+
+
 
 
 
@@ -124,6 +126,6 @@ deleteDeveloper(req, res) {
 //             res.json(opStatus);
 //         }
 //     });
-// };
+}
 
-module.exports = DevelopersController;
+module.exports =  DevelopersController;

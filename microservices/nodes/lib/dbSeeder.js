@@ -106,6 +106,6 @@ class DBSeeder {
         }
     }
  }   
-module.exports = dbSeeder;
+module.exports = new DBSeeder();
 
 

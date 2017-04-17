@@ -9,5 +9,7 @@
         "when": "$(basename).js.map"
       }
     },
-    "typescript.check.tscVersion": false
+    "typescript.check.tscVersion": false,
+    "angulardoc.repoId": "36bc9242-1336-470d-b91c-1f926849a079",
+    "angulardoc.lastSync": 0
   }
